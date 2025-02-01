@@ -1,6 +1,23 @@
-pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
-plugins { id("com.facebook.react.settings") }
-extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+pluginManagement {
+    // Incluir o plugin do React Native Gradle a partir do diretório correto
+    includeBuild("../node_modules/@react-native/gradle-plugin")
+}
+
+plugins {
+    // Aplica o plugin de configuração do React Native
+    id("com.facebook.react.settings")
+}
+
+extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
+    // Configura o autolink para bibliotecas do React Native
+    ex.autolinkLibrariesFromCommand()
+}
+
+// Define o nome do projeto
 rootProject.name = 'PuppyCareAPP'
+
+// Inclui o módulo principal do aplicativo
 include ':app'
+
+// Inclui o build do plugin do React Native
 includeBuild('../node_modules/@react-native/gradle-plugin')

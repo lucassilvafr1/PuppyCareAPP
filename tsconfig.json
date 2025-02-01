@@ -1,3 +1,7 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx", // ou "react" para versões mais antigas do React
+    "types": ["react"]
+  }
 }
